@@ -737,7 +737,6 @@ func (c *conn) ResetSession(_ context.Context) error {
 	}
 	c.commitTs = nil
 	c.batch = nil
-	c.retryAborts = true
 	c.autocommitDMLMode = Transactional
 	c.readOnlyStaleness = spanner.TimestampBound{}
 	return nil
